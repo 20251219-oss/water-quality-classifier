@@ -31,10 +31,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans KR',sans-serif;min-height:100vh;line-height:1.6}
 
-/* ── layout ── */
 .shell{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
-
-/* ── sidebar ── */
 .sidebar{background:var(--bg2);border-right:1px solid var(--border);padding:0;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
 .sidebar-logo{padding:28px 24px 20px;border-bottom:1px solid var(--border)}
 .logo-mark{display:flex;align-items:center;gap:10px;margin-bottom:4px}
@@ -54,7 +51,6 @@ body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans KR',sans-
 .accuracy-badge{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2)}
 .acc-dot{width:7px;height:7px;border-radius:50%;background:var(--clean);flex-shrink:0}
 
-/* ── main ── */
 .main{overflow-y:auto}
 .topbar{padding:20px 32px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--bg2);position:sticky;top:0;z-index:10}
 .page-title{font-size:16px;font-weight:500;color:var(--text)}
@@ -64,12 +60,9 @@ body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans KR',sans-
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 .content{padding:28px 32px}
-
-/* ── section visibility ── */
 .page-section{display:none}
 .page-section.active{display:block}
 
-/* ── cards ── */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:20px}
 .card-head{display:flex;align-items:center;gap:10px;margin-bottom:20px}
 .card-head svg{width:18px;height:18px;flex-shrink:0;opacity:.6}
@@ -77,7 +70,6 @@ body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans KR',sans-
 .card-head .badge{margin-left:auto;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
 .badge-info{background:rgba(59,140,240,0.15);color:var(--accent)}
 
-/* ── wavelength input grid ── */
 .wl-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:20px}
 .wl-cell{display:flex;flex-direction:column;gap:6px}
 .wl-nm{font-size:11px;color:var(--text3);text-align:center;font-family:'IBM Plex Mono',monospace}
@@ -87,19 +79,16 @@ body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans KR',sans-
 .wl-bar{height:3px;border-radius:2px;background:var(--border);margin-top:2px;overflow:hidden}
 .wl-bar-fill{height:100%;border-radius:2px;background:var(--accent);transition:width .3s ease}
 
-/* ── preset buttons ── */
 .preset-row{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
 .preset-btn{padding:7px 14px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:transparent;transition:all .15s;display:flex;align-items:center;gap:6px;font-family:'IBM Plex Sans KR',sans-serif}
 .preset-btn:hover{border-color:currentColor;background:rgba(255,255,255,0.04)}
 .p-clean{color:var(--clean)}.p-organic{color:var(--organic)}.p-heavy{color:var(--heavy)}.p-algae{color:var(--algae)}
 .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
 
-/* ── spectrum canvas ── */
 .spectrum-wrap{background:var(--bg3);border-radius:var(--radius);padding:16px;margin-bottom:20px;border:1px solid var(--border)}
 .spectrum-label{font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'IBM Plex Mono',monospace}
 canvas{display:block;width:100%;height:140px}
 
-/* ── action row ── */
 .action-row{display:flex;gap:10px}
 .btn-primary{padding:11px 28px;background:var(--accent);color:#fff;border:none;border-radius:9px;font-size:14px;font-weight:500;cursor:pointer;font-family:'IBM Plex Sans KR',sans-serif;transition:all .15s;display:flex;align-items:center;gap:8px}
 .btn-primary:hover{background:#2d7de0;transform:translateY(-1px)}
@@ -107,7 +96,6 @@ canvas{display:block;width:100%;height:140px}
 .btn-ghost{padding:11px 20px;background:transparent;color:var(--text2);border:1px solid var(--border2);border-radius:9px;font-size:14px;cursor:pointer;font-family:'IBM Plex Sans KR',sans-serif;transition:all .15s}
 .btn-ghost:hover{background:rgba(255,255,255,0.04);color:var(--text)}
 
-/* ── result panel ── */
 .result-panel{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-top:20px;display:none;animation:fadeUp .3s ease}
 .result-panel.show{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -123,7 +111,6 @@ canvas{display:block;width:100%;height:140px}
 .prob-fill{height:100%;border-radius:3px;transition:width .5s cubic-bezier(.4,0,.2,1)}
 .prob-pct{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--text2);width:40px;text-align:right;flex-shrink:0}
 
-/* ── CSV section ── */
 .upload-zone{border:2px dashed var(--border2);border-radius:var(--radius-lg);padding:40px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(59,140,240,0.04)}
 .upload-icon{margin:0 auto 12px;width:48px;height:48px;background:var(--bg3);border-radius:12px;display:flex;align-items:center;justify-content:center}
@@ -135,7 +122,10 @@ canvas{display:block;width:100%;height:140px}
 .csv-preview.show{display:block}
 .csv-row-label{font-size:11px;color:var(--text3);margin-bottom:8px;font-family:'IBM Plex Mono',monospace}
 
-/* ── history section ── */
+.csv-info{background:rgba(59,140,240,0.07);border:1px solid rgba(59,140,240,0.2);border-radius:var(--radius);padding:14px 16px;margin-top:14px;font-size:12px;color:var(--text2);display:none}
+.csv-info.show{display:block}
+.csv-info strong{color:var(--accent);display:block;margin-bottom:4px;font-size:13px}
+
 .history-list{display:flex;flex-direction:column;gap:0}
 .hist-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
 .hist-item:last-child{border-bottom:none}
@@ -147,7 +137,6 @@ canvas{display:block;width:100%;height:140px}
 .empty-hist{text-align:center;padding:40px;color:var(--text3);font-size:14px}
 .empty-hist svg{width:32px;height:32px;stroke:currentColor;fill:none;stroke-width:1.5;display:block;margin:0 auto 12px;opacity:.5}
 
-/* ── about section ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
 .info-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
 .info-title{font-size:12px;color:var(--text3);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
@@ -164,7 +153,6 @@ canvas{display:block;width:100%;height:140px}
 .pill-name{flex:1;font-weight:500}
 .pill-wl{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--text3)}
 
-/* ── importance chart ── */
 .imp-bars{display:flex;flex-direction:column;gap:8px}
 .imp-row{display:flex;align-items:center;gap:10px}
 .imp-label{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--text2);width:50px;flex-shrink:0}
@@ -176,7 +164,6 @@ canvas{display:block;width:100%;height:140px}
 <body>
 
 <div class="shell">
-  <!-- ── SIDEBAR ── -->
   <aside class="sidebar">
     <div class="sidebar-logo">
       <div class="logo-mark">
@@ -215,12 +202,11 @@ canvas{display:block;width:100%;height:140px}
     </div>
   </aside>
 
-  <!-- ── MAIN ── -->
   <main class="main">
     <div class="topbar">
       <div>
         <div class="page-title" id="topbar-title">직접 입력 분류</div>
-        <div class="page-sub">흡광도 값을 입력하고 오염 종류를 분류합니다</div>
+        <div class="page-sub" id="topbar-sub">흡광도 값을 입력하고 오염 종류를 분류합니다</div>
       </div>
       <div class="status-pill">
         <span class="pulse"></span>
@@ -229,8 +215,6 @@ canvas{display:block;width:100%;height:140px}
     </div>
 
     <div class="content">
-
-      <!-- ════ PAGE: ANALYZE ════ -->
       <div id="page-analyze" class="page-section active">
         <div class="card">
           <div class="card-head">
@@ -238,9 +222,7 @@ canvas{display:block;width:100%;height:140px}
             <h2>파장별 흡광도 입력</h2>
             <span class="badge badge-info">400–700 nm · 7개 파장</span>
           </div>
-          <div class="wl-grid" id="wl-grid">
-            <!-- JS로 생성 -->
-          </div>
+          <div class="wl-grid" id="wl-grid"></div>
           <div class="spectrum-wrap">
             <div class="spectrum-label">흡광도 스펙트럼 미리보기</div>
             <canvas id="spectrum-canvas"></canvas>
@@ -260,7 +242,6 @@ canvas{display:block;width:100%;height:140px}
             <button class="btn-ghost" onclick="resetAll()">초기화</button>
           </div>
         </div>
-
         <div class="result-panel" id="result-panel">
           <div class="result-top">
             <div>
@@ -280,23 +261,26 @@ canvas{display:block;width:100%;height:140px}
         </div>
       </div>
 
-      <!-- ════ PAGE: CSV ════ -->
       <div id="page-csv" class="page-section">
         <div class="card">
           <div class="card-head">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             <h2>버니어 CSV 파일 업로드</h2>
           </div>
-          <div class="upload-zone" id="upload-zone">
+          <div class="csv-info show">
+            <strong>✓ 지원하는 CSV 형식</strong>
+            헤더에 파장 / 흡광도 또는 wavelength / absorbance 포함 시 자동 인식됩니다.
+          </div>
+          <div class="upload-zone" id="upload-zone" style="margin-top:16px">
             <input type="file" id="csv-file-input" accept=".csv" onchange="handleCSV(event)">
             <div class="upload-icon">
               <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             </div>
             <div class="upload-title">CSV 파일을 클릭하여 선택</div>
-            <div class="upload-sub">Vernier Spectral Analysis 앱에서 내보낸 파일</div>
+            <div class="upload-sub">또는 파일을 여기로 드래그하세요</div>
           </div>
           <div class="csv-preview" id="csv-preview">
-            <div class="csv-row-label">추출된 흡광도 값</div>
+            <div class="csv-row-label">추출된 흡광도 값 (400–700 nm)</div>
             <div class="wl-grid" id="csv-wl-display"></div>
             <div class="spectrum-wrap" style="margin-bottom:0">
               <div class="spectrum-label">스펙트럼</div>
@@ -323,7 +307,6 @@ canvas{display:block;width:100%;height:140px}
         </div>
       </div>
 
-      <!-- ════ PAGE: HISTORY ════ -->
       <div id="page-history" class="page-section">
         <div class="card">
           <div class="card-head">
@@ -340,7 +323,6 @@ canvas{display:block;width:100%;height:140px}
         </div>
       </div>
 
-      <!-- ════ PAGE: ABOUT ════ -->
       <div id="page-about" class="page-section">
         <div class="about-grid">
           <div class="info-card">
@@ -356,7 +338,7 @@ canvas{display:block;width:100%;height:140px}
           <div class="info-card">
             <div class="info-title">학습 데이터</div>
             <div class="info-val">200개</div>
-            <div class="info-sub">흡광도 0.003–0.075 범위 재보정</div>
+            <div class="info-sub">흡광도 0.003–0.075 범위</div>
           </div>
           <div class="info-card">
             <div class="info-title">입력 특성</div>
@@ -364,88 +346,46 @@ canvas{display:block;width:100%;height:140px}
             <div class="info-sub">400–700nm 파장별 흡광도</div>
           </div>
         </div>
-
         <div class="card">
           <div class="card-head">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
             <h2>오염 종류별 흡광 특성</h2>
           </div>
           <div class="class-pills">
-            <div class="class-pill" style="background:var(--clean-bg)"><div class="pill-dot" style="background:var(--clean)"></div><span class="pill-name" style="color:var(--clean)">깨끗한 물</span><span class="pill-wl">전 파장 균일하게 낮음 (0.003–0.010)</span></div>
-            <div class="class-pill" style="background:var(--organic-bg)"><div class="pill-dot" style="background:var(--organic)"></div><span class="pill-name" style="color:var(--organic)">유기물 오염</span><span class="pill-wl">400nm 높고 장파장으로 급감 (0.010–0.070)</span></div>
-            <div class="class-pill" style="background:var(--heavy-bg)"><div class="pill-dot" style="background:var(--heavy)"></div><span class="pill-name" style="color:var(--heavy)">중금속 오염</span><span class="pill-wl">500–550nm 중간 파장 피크 (0.010–0.060)</span></div>
-            <div class="class-pill" style="background:var(--algae-bg)"><div class="pill-dot" style="background:var(--algae)"></div><span class="pill-name" style="color:var(--algae)">조류(녹조) 오염</span><span class="pill-wl">650–700nm 장파장 피크, 엽록소 a (0.010–0.075)</span></div>
+            <div class="class-pill" style="background:var(--clean-bg)"><div class="pill-dot" style="background:var(--clean)"></div><span class="pill-name" style="color:var(--clean)">깨끗한 물</span><span class="pill-wl">전 파장 균일하게 낮음</span></div>
+            <div class="class-pill" style="background:var(--organic-bg)"><div class="pill-dot" style="background:var(--organic)"></div><span class="pill-name" style="color:var(--organic)">유기물 오염</span><span class="pill-wl">400nm 높고 장파장으로 급감</span></div>
+            <div class="class-pill" style="background:var(--heavy-bg)"><div class="pill-dot" style="background:var(--heavy)"></div><span class="pill-name" style="color:var(--heavy)">중금속 오염</span><span class="pill-wl">500–550nm 중간 파장 피크</span></div>
+            <div class="class-pill" style="background:var(--algae-bg)"><div class="pill-dot" style="background:var(--algae)"></div><span class="pill-name" style="color:var(--algae)">조류 오염</span><span class="pill-wl">650–700nm 장파장 피크</span></div>
           </div>
         </div>
-
         <div class="card">
           <div class="card-head">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><rect x="7" y="13" width="3" height="7"/><rect x="12" y="9" width="3" height="11"/><rect x="17" y="5" width="3" height="15"/></svg>
-            <h2>파장별 중요도 (Feature Importance)</h2>
+            <h2>파장별 중요도</h2>
           </div>
           <div class="imp-bars" id="imp-bars"></div>
         </div>
-
-        <div class="card">
-          <div class="card-head">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
-            <h2>모델 파라미터</h2>
-          </div>
-          <table class="spec-table">
-            <thead><tr><th>파라미터</th><th>값</th></tr></thead>
-            <tbody>
-              <tr><td>알고리즘</td><td>RandomForestClassifier</td></tr>
-              <tr><td>n_estimators</td><td>100</td></tr>
-              <tr><td>max_depth</td><td>10</td></tr>
-              <tr><td>전처리</td><td>StandardScaler</td></tr>
-              <tr><td>학습/테스트 분할</td><td>80% / 20%</td></tr>
-              <tr><td>분류 클래스</td><td>4개</td></tr>
-            </tbody>
-          </table>
-        </div>
       </div>
-
     </div>
   </main>
 </div>
 
 <script>
 const WLS = [400,450,500,550,600,650,700];
-const LABELS = ['깨끗한 물','유기물 오염','중금속 오염','조류(녹조) 오염'];
+const LABELS = ['깨끗한 물','유기물 오염','중금속 오염','조류 오염'];
 const COLORS = ['#1ecb8a','#f07a3b','#8b8fa8','#5cbf40'];
-const BG_COLORS = ['var(--clean-bg)','var(--organic-bg)','var(--heavy-bg)','var(--algae-bg)'];
-
-// ── 실제 채집 환경 기준 낮은 흡광도(0.003~0.075)로 재보정 ──
-// 깨끗한 물 : 전 파장 균일하게 매우 낮음
-// 유기물 오염: 단파장(400nm) 높고 장파장으로 갈수록 급감
-// 중금속 오염: 500~550nm 중간 파장에서 피크
-// 조류(녹조) : 650~700nm 장파장에서 피크 (엽록소 a 흡수)
 const PRESETS = [
   [0.008,0.007,0.006,0.005,0.005,0.004,0.004],
   [0.065,0.052,0.040,0.025,0.015,0.012,0.009],
   [0.020,0.030,0.052,0.058,0.048,0.028,0.014],
   [0.014,0.016,0.020,0.026,0.038,0.062,0.072]
 ];
-
-const CLASS_MEANS = [
-  [0.008,0.007,0.006,0.005,0.005,0.004,0.004],
-  [0.065,0.052,0.040,0.025,0.015,0.012,0.009],
-  [0.020,0.030,0.052,0.058,0.048,0.028,0.014],
-  [0.014,0.016,0.020,0.026,0.038,0.062,0.072]
-];
-
-const GLOBAL_MEAN = [0.0268,0.0263,0.0295,0.0285,0.0265,0.0265,0.0248];
-const GLOBAL_STD  = [0.0225,0.0170,0.0177,0.0190,0.0172,0.0222,0.0275];
-
-// 파장별 중요도 (보고서 결과 기반)
 const IMPORTANCES = [0.108,0.102,0.128,0.130,0.138,0.184,0.210];
-
 let history = [];
 
-/* ── build wavelength input grid ── */
 function buildGrid(){
   const grid = document.getElementById('wl-grid');
-  grid.innerHTML = WLS.map((w,i)=>`
+  grid.innerHTML = WLS.map((w,i) => `
     <div class="wl-cell">
       <div class="wl-nm">${w} nm</div>
       <input class="wl-input" type="number" id="w${w}" value="${PRESETS[0][i].toFixed(4)}"
@@ -461,18 +401,18 @@ function onInputChange(){
 
 function updateBars(){
   const vals = getValues();
-  WLS.forEach((w,i)=>{
+  WLS.forEach((w,i) => {
     const b = document.getElementById('bar'+w);
     if(b) b.style.width = Math.min(vals[i]/0.08,1)*100+'%';
   });
 }
 
 function getValues(){
-  return WLS.map(w=>Math.max(0,parseFloat(document.getElementById('w'+w).value)||0));
+  return WLS.map(w => Math.max(0, parseFloat(document.getElementById('w'+w).value)||0));
 }
 
 function loadPreset(idx){
-  PRESETS[idx].forEach((v,i)=>{
+  PRESETS[idx].forEach((v,i) => {
     const el = document.getElementById('w'+WLS[i]);
     if(el) el.value = v.toFixed(4);
   });
@@ -480,45 +420,50 @@ function loadPreset(idx){
   drawSpectrum('spectrum-canvas', PRESETS[idx]);
 }
 
-/* ── RF classifier (distance-based approximation) ── */
-function rfClassify(vals){
-  function scale(v){ return v.map((x,i)=>(x-GLOBAL_MEAN[i])/(GLOBAL_STD[i]||1)); }
-  const sv = scale(vals);
-  const scores = CLASS_MEANS.map((m,ci)=>{
-    const sm = scale(m);
-    const dist = sm.reduce((acc,_,i)=>acc+(sv[i]-sm[i])**2,0);
-    return Math.exp(-dist*4.0); // 낮은 흡광도 범위에서도 클래스 구분이 잘 되도록 조정
-  });
-  const total = scores.reduce((a,b)=>a+b,0);
-  const probs = scores.map(s=>s/total);
-  const pred = probs.indexOf(Math.max(...probs));
-  return {pred, probs, conf:probs[pred]};
+function normalizeVals(vals){
+  const maxV = Math.max(...vals);
+  if(maxV < 0.003) return vals.map(() => 0);
+  return vals.map(v => v / maxV);
 }
 
-/* ── show result ── */
+const CLASS_MEANS_NORM = [
+  [1.000,0.875,0.750,0.625,0.625,0.500,0.500],
+  [1.000,0.800,0.615,0.385,0.231,0.185,0.138],
+  [0.345,0.517,0.897,1.000,0.828,0.483,0.241],
+  [0.194,0.222,0.278,0.361,0.528,0.861,1.000],
+];
+const CLASS_MAG = [0.006, 0.035, 0.038, 0.040];
+
+function rfClassify(vals){
+  const maxV = Math.max(...vals);
+  const normV = normalizeVals(vals);
+  const patternScores = CLASS_MEANS_NORM.map(m => {
+    const dist = m.reduce((acc, mv, i) => acc + (normV[i] - mv)**2, 0);
+    return Math.exp(-dist * 3.5);
+  });
+  const magScores = CLASS_MAG.map(m => {
+    const dist = (maxV - m)**2;
+    return Math.exp(-dist * 800);
+  });
+  const combined = patternScores.map((ps, i) => ps * 0.8 + magScores[i] * 0.2);
+  const total = combined.reduce((a,b) => a+b, 0);
+  const probs = combined.map(s => s / total);
+  const pred = probs.indexOf(Math.max(...probs));
+  return {pred, probs, conf: probs[pred]};
+}
+
 function showResult(panelId, arcId, textId, nameId, confId, probListId, result){
   const panel = document.getElementById(panelId);
   panel.classList.add('show');
-  panel.style.borderColor = COLORS[result.pred]+'44';
-  panel.style.background = BG_COLORS[result.pred].replace('var(','').replace(')','');
-  panel.style.background = `color-mix(in srgb, ${COLORS[result.pred]} 6%, var(--bg3))`;
-
   document.getElementById(nameId).textContent = LABELS[result.pred];
   document.getElementById(nameId).style.color = COLORS[result.pred];
   document.getElementById(confId).textContent = `신뢰도 ${(result.conf*100).toFixed(1)}%`;
-  document.getElementById(confId).style.color = COLORS[result.pred]+'cc';
-
-  // arc
-  const pct = result.conf;
-  const circumference = 188.5;
   const arc = document.getElementById(arcId);
-  arc.style.strokeDashoffset = circumference*(1-pct);
+  arc.style.strokeDashoffset = 188.5 * (1 - result.conf);
   arc.style.stroke = COLORS[result.pred];
-  document.getElementById(textId).textContent = Math.round(pct*100)+'%';
-
-  // prob bars
+  document.getElementById(textId).textContent = Math.round(result.conf*100)+'%';
   const pl = document.getElementById(probListId);
-  pl.innerHTML = LABELS.map((l,i)=>`
+  pl.innerHTML = LABELS.map((l,i) => `
     <div class="prob-row">
       <div class="prob-label">${l}</div>
       <div class="prob-track">
@@ -536,13 +481,12 @@ function classify(){
 }
 
 function resetAll(){
-  WLS.forEach(w=>{ const el=document.getElementById('w'+w); if(el) el.value='0.000'; });
+  WLS.forEach(w => { const el = document.getElementById('w'+w); if(el) el.value='0.000'; });
   updateBars();
   drawSpectrum('spectrum-canvas', new Array(7).fill(0));
   document.getElementById('result-panel').classList.remove('show');
 }
 
-/* ── spectrum canvas ── */
 function drawSpectrum(canvasId, vals){
   const canvas = document.getElementById(canvasId);
   if(!canvas) return;
@@ -552,115 +496,96 @@ function drawSpectrum(canvasId, vals){
   canvas.width = W*dpr; canvas.height = H*dpr;
   ctx.scale(dpr,dpr);
   ctx.clearRect(0,0,W,H);
-
-  const pad={l:38,r:10,t:10,b:26};
-  const iW=W-pad.l-pad.r, iH=H-pad.t-pad.b;
-  const maxV=Math.max(...vals,0.08);
-  const gridC='rgba(99,140,210,0.1)', textC='rgba(138,150,170,0.8)';
-
-  ctx.font=`11px 'IBM Plex Mono',monospace`;
-  [0,0.02,0.04,0.06].forEach(v=>{
-    const y=pad.t+iH*(1-v/maxV);
-    ctx.beginPath();ctx.strokeStyle=gridC;ctx.lineWidth=.5;
-    ctx.moveTo(pad.l,y);ctx.lineTo(pad.l+iW,y);ctx.stroke();
-    ctx.fillStyle=textC;ctx.textAlign='right';ctx.fillText(v.toFixed(2),pad.l-4,y+4);
+  const pad = {l:38,r:10,t:10,b:26};
+  const iW = W-pad.l-pad.r, iH = H-pad.t-pad.b;
+  const maxV = Math.max(...vals, 0.08);
+  ctx.font = `11px 'IBM Plex Mono',monospace`;
+  [0,0.02,0.04,0.06].forEach(v => {
+    const y = pad.t + iH*(1 - v/maxV);
+    ctx.strokeStyle = 'rgba(99,140,210,0.1)';
+    ctx.moveTo(pad.l, y); ctx.lineTo(pad.l+iW, y); ctx.stroke();
+    ctx.fillStyle = 'rgba(138,150,170,0.8)';
+    ctx.textAlign = 'right';
+    ctx.fillText(v.toFixed(2), pad.l-4, y+4);
   });
-
-  WLS.forEach((w,i)=>{
-    const x=pad.l+(i/(WLS.length-1))*iW;
-    ctx.fillStyle=textC;ctx.textAlign='center';ctx.fillText(w,x,H-6);
+  WLS.forEach((w,i) => {
+    const x = pad.l + (i/(WLS.length-1))*iW;
+    ctx.textAlign = 'center';
+    ctx.fillText(w, x, H-6);
   });
-
-  // gradient fill
-  const grd=ctx.createLinearGradient(0,pad.t,0,pad.t+iH);
+  const grd = ctx.createLinearGradient(0, pad.t, 0, pad.t+iH);
   grd.addColorStop(0,'rgba(59,140,240,0.18)');
   grd.addColorStop(1,'rgba(59,140,240,0)');
   ctx.beginPath();
-  vals.forEach((v,i)=>{
-    const x=pad.l+(i/(WLS.length-1))*iW;
-    const y=pad.t+iH*(1-Math.min(v,maxV)/maxV);
-    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  vals.forEach((v,i) => {
+    const x = pad.l + (i/(WLS.length-1))*iW;
+    const y = pad.t + iH*(1 - Math.min(v,maxV)/maxV);
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
   });
-  ctx.lineTo(pad.l+iW,pad.t+iH);ctx.lineTo(pad.l,pad.t+iH);ctx.closePath();
-  ctx.fillStyle=grd;ctx.fill();
-
-  // line
-  ctx.beginPath();ctx.strokeStyle='#3b8cf0';ctx.lineWidth=2;ctx.lineJoin='round';
-  vals.forEach((v,i)=>{
-    const x=pad.l+(i/(WLS.length-1))*iW;
-    const y=pad.t+iH*(1-Math.min(v,maxV)/maxV);
-    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  ctx.lineTo(pad.l+iW, pad.t+iH); ctx.lineTo(pad.l, pad.t+iH); ctx.closePath();
+  ctx.fillStyle = grd; ctx.fill();
+  ctx.strokeStyle = '#3b8cf0'; ctx.lineWidth = 2;
+  ctx.beginPath();
+  vals.forEach((v,i) => {
+    const x = pad.l + (i/(WLS.length-1))*iW;
+    const y = pad.t + iH*(1 - Math.min(v,maxV)/maxV);
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
   });
   ctx.stroke();
-
-  vals.forEach((v,i)=>{
-    const x=pad.l+(i/(WLS.length-1))*iW;
-    const y=pad.t+iH*(1-Math.min(v,maxV)/maxV);
-    ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);
-    ctx.fillStyle='#3b8cf0';ctx.fill();
-    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--bg2')||'#111620';
-    ctx.lineWidth=1.5;ctx.stroke();
-  });
 }
 
-/* ── CSV upload ── */
 function handleCSV(e){
-  const file=e.target.files[0]; if(!file) return;
-  const reader=new FileReader();
-  reader.onload=function(ev){
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev){
     try{
-      const lines=ev.target.result.split('\n').filter(l=>l.trim());
-      const headers=lines[0].toLowerCase().split(',');
-      const wlIdx=headers.findIndex(c=>c.includes('wavelength'));
-      const absIdx=headers.findIndex(c=>c.includes('absorbance'));
-      if(wlIdx<0||absIdx<0) throw new Error('열 이름 인식 실패');
-      const data=lines.slice(1).map(l=>{
-        const c=l.split(',');
-        return {wl:parseFloat(c[wlIdx]),abs:parseFloat(c[absIdx])};
-      }).filter(d=>!isNaN(d.wl)&&!isNaN(d.abs));
-      const vals=WLS.map(tw=>{
-        const closest=data.reduce((b,d)=>Math.abs(d.wl-tw)<Math.abs(b.wl-tw)?d:b);
-        return Math.max(0,closest.abs);
+      const lines = ev.target.result.split('\n').filter(l => l.trim());
+      const headers = lines[0].split(',').map(h => h.replace(/"/g,'').trim().toLowerCase());
+      const wlIdx = headers.findIndex(c => c.includes('파장') || c.includes('wavelength'));
+      const absIdx = headers.findIndex(c => c.includes('흡광도') || c.includes('absorbance'));
+      if(wlIdx < 0 || absIdx < 0) throw new Error('파장 또는 흡광도 열 없음');
+      const data = lines.slice(1).map(l => {
+        const c = l.split(',');
+        return { wl: parseFloat(c[wlIdx]), abs: parseFloat(c[absIdx]) };
+      }).filter(d => !isNaN(d.wl) && !isNaN(d.abs));
+      const vals = WLS.map(tw => {
+        const closest = data.reduce((b, d) => Math.abs(d.wl - tw) < Math.abs(b.wl - tw) ? d : b);
+        return Math.max(0, closest.abs);
       });
-
-      const preview=document.getElementById('csv-preview');
+      const preview = document.getElementById('csv-preview');
       preview.classList.add('show');
-      document.getElementById('csv-wl-display').innerHTML=WLS.map((w,i)=>`
+      document.getElementById('csv-wl-display').innerHTML = WLS.map((w,i) => `
         <div class="wl-cell">
           <div class="wl-nm">${w} nm</div>
-          <div style="text-align:center;font-size:13px;font-weight:500;padding:10px 4px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);font-family:'IBM Plex Mono',monospace;color:var(--text)">${vals[i].toFixed(3)}</div>
+          <div style="text-align:center;font-size:13px;font-weight:500;padding:10px 4px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);font-family:'IBM Plex Mono',monospace;color:var(--text)">
+            ${vals[i].toFixed(4)}
+          </div>
         </div>`).join('');
-
-      setTimeout(()=>drawSpectrum('csv-canvas',vals),50);
-      const result=rfClassify(vals);
+      setTimeout(() => drawSpectrum('csv-canvas', vals), 50);
+      const result = rfClassify(vals);
       showResult('csv-result-panel','csv-conf-arc','csv-conf-text','csv-res-name','csv-res-conf','csv-prob-list',result);
-      addHistory(result,vals,'CSV: '+file.name);
+      addHistory(result, vals, 'CSV: ' + file.name);
     } catch(err){
-      alert('CSV를 읽을 수 없습니다.\n'+err.message);
+      alert('CSV를 읽을 수 없습니다');
     }
   };
-  reader.readAsText(file,'utf-8');
+  reader.readAsText(file, 'utf-8');
 }
 
-/* ── history ── */
-function addHistory(result,vals,source){
-  const now=new Date();
-  history.unshift({
-    result,vals,
-    source:source||'직접 입력',
-    time:now.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})
-  });
-  if(history.length>20) history.pop();
+function addHistory(result, vals, source){
+  const now = new Date();
+  history.unshift({result, vals, source: source||'직접 입력', time: now.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})});
+  if(history.length > 20) history.pop();
   renderHistory();
 }
 
 function renderHistory(){
-  const el=document.getElementById('history-list');
+  const el = document.getElementById('history-list');
   if(!history.length){
-    el.innerHTML='<div class="empty-hist"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M9 9l3 3 4-4"/></svg>아직 측정 기록이 없습니다</div>';
+    el.innerHTML = '<div class="empty-hist">아직 측정 기록이 없습니다</div>';
     return;
   }
-  el.innerHTML=history.map(h=>`
+  el.innerHTML = history.map(h => `
     <div class="hist-item">
       <div class="hist-color" style="background:${COLORS[h.result.pred]}"></div>
       <div class="hist-main">
@@ -671,12 +596,11 @@ function renderHistory(){
     </div>`).join('');
 }
 
-function clearHistory(){ history=[]; renderHistory(); }
+function clearHistory(){ history = []; renderHistory(); }
 
-/* ── importance bars ── */
 function buildImpBars(){
-  const maxI=Math.max(...IMPORTANCES);
-  document.getElementById('imp-bars').innerHTML=WLS.map((w,i)=>`
+  const maxI = Math.max(...IMPORTANCES);
+  document.getElementById('imp-bars').innerHTML = WLS.map((w,i) => `
     <div class="imp-row">
       <div class="imp-label">${w} nm</div>
       <div class="imp-track"><div class="imp-fill" style="width:${(IMPORTANCES[i]/maxI*100).toFixed(1)}%"></div></div>
@@ -684,45 +608,34 @@ function buildImpBars(){
     </div>`).join('');
 }
 
-/* ── page nav ── */
-const PAGE_TITLES={
-  analyze:['직접 입력 분류','흡광도 값을 입력하고 오염 종류를 분류합니다'],
-  csv:['CSV 파일 업로드','버니어 Spectral Analysis 내보내기 파일을 분석합니다'],
-  history:['측정 기록','지금까지 분류한 샘플 목록입니다'],
-  about:['모델 정보','랜덤 포레스트 모델 파라미터 및 특성 정보']
+const PAGE_TITLES = {
+  analyze: ['직접 입력 분류','흡광도 값을 입력하고 오염 종류를 분류합니다'],
+  csv:     ['CSV 파일 업로드','버니어 Spectral Analysis 내보내기 파일을 분석합니다'],
+  history: ['측정 기록','지금까지 분류한 샘플 목록입니다'],
+  about:   ['모델 정보','랜덤 포레스트 모델 파라미터 및 특성 정보']
 };
 
 function showPage(name){
-  document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
   document.getElementById('page-'+name).classList.add('active');
-  const btns=[...document.querySelectorAll('.nav-item')];
-  const map={analyze:0,csv:1,history:2,about:3};
-  btns[map[name]].classList.add('active');
-  document.getElementById('topbar-title').textContent=PAGE_TITLES[name][0];
-  document.querySelector('.page-sub').textContent=PAGE_TITLES[name][1];
-
-  if(name==='analyze') setTimeout(()=>drawSpectrum('spectrum-canvas',getValues()),50);
+  const map = {analyze:0, csv:1, history:2, about:3};
+  document.querySelectorAll('.nav-item')[map[name]].classList.add('active');
+  document.getElementById('topbar-title').textContent = PAGE_TITLES[name][0];
+  document.getElementById('topbar-sub').textContent = PAGE_TITLES[name][1];
 }
 
-/* ── drag & drop CSV ── */
-const zone=document.getElementById('upload-zone');
-['dragover','dragenter'].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault();zone.classList.add('drag')}));
-['dragleave','drop'].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault();zone.classList.remove('drag')}));
-zone.addEventListener('drop',e=>{
-  const file=e.dataTransfer.files[0];
-  if(file&&file.name.endsWith('.csv')){
-    const fakeEvent={target:{files:[file]}};
-    handleCSV(fakeEvent);
-  }
+const zone = document.getElementById('upload-zone');
+['dragover','dragenter'].forEach(ev => zone.addEventListener(ev, e => { e.preventDefault(); zone.classList.add('drag'); }));
+['dragleave','drop'].forEach(ev => zone.addEventListener(ev, e => { e.preventDefault(); zone.classList.remove('drag'); }));
+zone.addEventListener('drop', e => {
+  const file = e.dataTransfer.files[0];
+  if(file && file.name.endsWith('.csv')) handleCSV({target:{files:[file]}});
 });
 
-/* ── init ── */
 buildGrid();
 buildImpBars();
-setTimeout(()=>{
-  drawSpectrum('spectrum-canvas', PRESETS[0]);
-},100);
+setTimeout(() => drawSpectrum('spectrum-canvas', PRESETS[0]), 100);
 </script>
 </body>
 </html>
